@@ -26,7 +26,7 @@ Route::get('post/create',[PostController::class,'create'])->name('post.create');
 
 Route::post('post/create',[PostController::class,'store'])->name('post.store');
 
-Route::get('curso/{slug}',[CursoController::class,'show'])->name('curso.show');
+Route::get('post/{slug}',[CursoController::class,'show'])->name('curso.show');
 
 Route::get('post/edit/{post}',[PostController::class,'edit'])->name('post.edit');
 
