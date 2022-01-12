@@ -22,18 +22,6 @@ Route::get('/', function () {
 
 Route::resource('post',PostController::class);
 
-Route::get('post/create',[PostController::class,'create'])->name('post.create');
-
-Route::post('post/create',[PostController::class,'store'])->name('post.store');
-
-Route::get('post/{slug}',[PostController::class,'show'])->name('post.show');
-
-Route::get('post/edit/{post}',[PostController::class,'edit'])->name('post.edit');
-
-Route::put('post/edit/{post}',[PostController::class,'update'])->name('post.update');
-
-Route::delete('post/{post}',[PostController::class,'destroy'])->name('post.destroy');
-
 Route::get('contacto',[ContactoController::class,'index'])->name('contacto.index');
 
 Route::post('contacto',[ContactoController::class,'store'])->name('contacto.store');
