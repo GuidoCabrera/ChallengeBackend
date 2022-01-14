@@ -22,7 +22,7 @@ function recortarTexto($texto, $limite=20){
 <div id="containerHeader">
     <div class="row">
         <div class="col">
-            <a href="{{route('post.create')}}" class="p-3 ms-4 mt-4 badge bg-primary text-wrap">crear nuevo post</a>
+            <a href="{{route('home')}}" class="p-3 ms-4 mt-4 badge bg-primary text-wrap">Inicio</a>
             <a href="{{route('contacto.index')}}" class="p-3 ms-2 mt-4 badge bg-primary text-wrap">Contacto</a>
         </div>
         <div class="col">
@@ -72,6 +72,15 @@ function recortarTexto($texto, $limite=20){
 
                                     <div class="text-start" id="containerBtnEdit">
                                         <a href="{{route('post.edit',$post->id)}}" class="btn btn-info">Editar</a>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-12 mt-3">
+
+                                    <div class="text-center" id="containerBtnEdit">
+                                        <a href="{{route('post.show',$post->slug)}}" class="btn btn-success">Ver Post</a>
                                     </div>
 
                                 </div>

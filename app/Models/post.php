@@ -1,13 +1,23 @@
 <?php
 
 namespace App\Models;
-
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
 
-class post extends Model
+class Post extends Model
 {
     use HasFactory;
+    use Sluggable;
 
     protected $fillable = ['url'];
+
+    public function sluggable(): array {
+        return [
+            'slug' => [
+                'source' => 'titulo'
+            ]
+        ];
+    }
 }
