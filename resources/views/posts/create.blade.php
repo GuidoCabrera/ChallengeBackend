@@ -4,7 +4,7 @@
 
 @section('Content')
 
-<a href="{{route('post.index')}}" class="p-3 ms-4 mt-4 badge bg-primary text-wrap">Volver</a>
+<a href="{{route('home')}}" class="p-3 ms-4 mt-4 badge bg-primary text-wrap">Volver</a>
 
 <div class="d-flex justify-content-center">
 
