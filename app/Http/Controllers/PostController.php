@@ -108,7 +108,7 @@ class PostController extends Controller
             }
         
                 $post->titulo = $request->title;
-                $post->slug = Str::slug($request->title);
+                $post->slug = SlugService::createSlug(Post::class,'slug',$request->title);
                 $post->descripcion = $request->description;
     
                 $post->save();
